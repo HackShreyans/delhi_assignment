@@ -1,3 +1,7 @@
+//user Auth part is incomleted>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
 const JWT = require("jsonwebtoken");
 const UserModel = require("../Model/userModel");
 
