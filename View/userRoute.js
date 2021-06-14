@@ -1,7 +1,7 @@
 const express = require("express");
 
-//import middleware Auth<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-const userAuth = require("../middleware/user");
+//import middleware Auth<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<this part incomplete>>>>>>>>>>>>>>>>>
+//const userAuth = require("../middleware/user");
 
 const {
   addUser,
@@ -16,19 +16,19 @@ const {
 const router = express.Router();
 
 //post or save data on this route<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-router.post("/api/create", userAuth, addUser);
+router.post("/api/create", addUser);
 
 //get or retrive data on this route<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-router.get("/api/user", userAuth, getUser);
+router.get("/api/user",  getUser);
 
 //put or update data on this route<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-router.put("/api/update/:id", userAuth, updateUser);
+router.put("/api/update/:id",  updateUser);
 
 //delete data on this route<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<,,,,,,,,,
-router.delete("/api/delete/:id", userAuth, deleteUser);
+router.delete("/api/delete/:id",  deleteUser);
 
 //find all nearby friends from this route<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-router.get("/api/find", userAuth, findUser);
+router.get("/api/find",findUser);
 
 //login user router<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 router.post("api/login", loginUser);
